@@ -1,33 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
   <title>Small Restaurant Webpage </title>
     <style>
-
+      
+      h1{
+        font-size: 60px;
+        text-align: center;
+      }
+      h2 {
+        margin: 50px 0 50px 0; 
+        text-align: center;
+        color: grey;
+      }
+      
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-size: cover;
+        margin: 0 auto;
+        width: 600px;
+        background-color: rgba( 192, 189, 189 );
+      }
+      
+      p{
+        background: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 1);
+        padding: 10px;
+        text-align: justify;
+        line-height: 20px;
+        position: absolute;
+        margin: 0px;
+        bottom: 0;
+         
+      }
+      
+      div{
+        height: 200px;
+        margin: 40px 0 0 0;
+        position: relative;
+        border-radius: 15px;
+      
+      }
+      
+      .first{
+        background: url("https://i.imgur.com/JT1WITp.jpg");
+      }
+      .second{
+        background: url("https://i.imgur.com/XmjPHp8.jpg");
+      }
+      .third{
+        background: url("https://i.imgur.com/29xJsBm.jpg");
+      }
+      
+      .price {
+        float: right;
+      }
+      
+      /* Media Queries */
+      
+       @media (max-width: 500px){
+        
+        div {
+          margin: 40px 0 0 0;
+          font-size: 12px;
+        
+      }
+        h1 {
+          font-size: 30px;
+          margin-top: 30px;
+          line-height: 20px;
+          font-family: Open Sans
+          text-align: center;
+          
+        } 
+        h2 {
+          font-size: 15px;
+          text-align: center;
+          margin-top: 20px;
+          
+        }
+         .first{
+           
+         }
+      }
+      
+      
       
     </style>
 </head>
 <body>
   <h1> Elcapitan Restaurant </h1>
+  <h2> A new restaurant behind ASquare shop :p </h2>
 
   
   <div class="first">
-    <p> Chicken Dum ka Biriyani $30 <br />
+    <p> Chicken Dum ka Biriyani <span class="price"> $30 </span> <br />
     Hyderabadi Dum Biryani is world famous dish from India, native to Hyderabad. 
     This non-vegetarian delicacy is an authentic Hyderabadi rice preparation which is a meal in itself. </p> 
   </div>
     
   <div class="second">
-    <p> Chicken Basket $20 <br />
+    <p> Chicken Basket <span class="price"> $20 </span> <br />
    Coupled with flavors of spices delicately combined with rice and chicken makes an aromatic combination that is hard to resist. How to make this Biryani recipe? 
    This rice dish has two major ingredients – chicken and basmati rice. </p>
   </div>
   
   <div class="third">
-    <p> Mozzarella Chicken $10 <br />
+    <p> Mozzarella Chicken <span class="price"> $10 </span> <br />
     It is liked by locals and tourists alike in Hyderabad. While people might go all the way to Hyderabad to relish this dish, 
 you can make this mouth-watering biryani recipe in your own kitchen in no time.</p>
   </div>
+  
   
 </body>
 </html>
