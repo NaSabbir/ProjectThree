@@ -4,7 +4,6 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
   <title>Small Restaurant Webpage </title>
     <style>
-      
       h1{
         font-size: 60px;
         text-align: center;
@@ -32,14 +31,22 @@
         position: absolute;
         margin: 0px;
         bottom: 0;
+       
+         
+
+        
          
       }
       
       div{
-        height: 200px;
+        height: 250px;
         margin: 40px 0 0 0;
         position: relative;
         border-radius: 15px;
+        transition: height .5s;
+        -webkit-transition: width 2s;
+        -moz-transition: width 2s;
+        
       
       }
       
@@ -55,6 +62,19 @@
       
       .price {
         float: right;
+      }
+      
+      .dsc p{
+        height: 150px;
+        color: red;
+        transition: all 1s ease-in-out;
+          -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+      }
+      
+      small {
+        opacity: 1;
       }
       
       /* Media Queries */
@@ -90,28 +110,37 @@
     </style>
 </head>
 <body>
+  <script src="jquery.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  
   <h1> Elcapitan Restaurant </h1>
   <h2> A new restaurant behind ASquare shop :p </h2>
 
   
   <div class="first">
-    <p> Chicken Dum ka Biriyani <span class="price"> $30 </span> <br />
-    Hyderabadi Dum Biryani is world famous dish from India, native to Hyderabad. 
-    This non-vegetarian delicacy is an authentic Hyderabadi rice preparation which is a meal in itself. </p> 
+    <p class="dsc"> Chicken Dum ka Biriyani <span class="price"> $30 </span> <br />
+   <small> Hyderabadi Dum Biryani is world famous dish from India, native to Hyderabad. 
+    This non-vegetarian delicacy is an authentic Hyderabadi rice preparation which is a meal in itself. </small></p> 
   </div>
     
   <div class="second">
-    <p> Chicken Basket <span class="price"> $20 </span> <br />
-   Coupled with flavors of spices delicately combined with rice and chicken makes an aromatic combination that is hard to resist. How to make this Biryani recipe? 
-   This rice dish has two major ingredients – chicken and basmati rice. </p>
+    <p class="dsc"> Chicken Basket <span class="price"> $20 </span> <br />
+  <small> Coupled with flavors of spices delicately combined with rice and chicken makes an aromatic combination that is hard to resist. How to make this Biryani recipe? 
+    This rice dish has two major ingredients – chicken and basmati rice. </small> </p>
   </div>
   
   <div class="third">
-    <p> Mozzarella Chicken <span class="price"> $10 </span> <br />
-    It is liked by locals and tourists alike in Hyderabad. While people might go all the way to Hyderabad to relish this dish, 
-you can make this mouth-watering biryani recipe in your own kitchen in no time.</p>
+    <p class="dsc"> Mozzarella Chicken <span class="price"> $10 </span> <br />
+   <small> It is liked by locals and tourists alike in Hyderabad. While people might go all the way to Hyderabad to relish this dish, 
+     you can make this mouth-watering biryani recipe in your own kitchen in no time. </small></p>
   </div>
   
+  <script> 
+  $("div").on('click', function() {
+    $(this).toggleClass('first');
+  })
+
+  </script>
   
 </body>
 </html>
